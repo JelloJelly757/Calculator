@@ -1,0 +1,7 @@
+.output-container {
+    border: 2px solid;
+    border-radius: 15px; 
+    width: 300px; 
+    height: 80px; 
+    background-color: white; 
+}
