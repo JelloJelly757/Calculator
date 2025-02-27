@@ -85,31 +85,31 @@ function button9() {
   document.getElementById('screen').innerHTML = text;
 }
 
-btnNine.addEventListener("click", button9);
+btnAdd.addEventListener("click", buttonadd);
 
-function button9() {
-  let text = "9";
+function buttonadd() {
+  let text = "+";
   document.getElementById('screen').innerHTML = text;
 }
 
-btnNine.addEventListener("click", button9);
+btnSub.addEventListener("click", buttonsub);
 
-function button9() {
-  let text = "9";
+function buttonsub() {
+  let text = "-";
   document.getElementById('screen').innerHTML = text;
 }
 
-btnNine.addEventListener("click", button9);
+btnMulti.addEventListener("click", buttonmulti);
 
-function button9() {
-  let text = "9";
+function buttonmulti() {
+  let text = "*";
   document.getElementById('screen').innerHTML = text;
 }
 
-btnNine.addEventListener("click", button9);
+btnDiv.addEventListener("click", buttondiv);
 
-function button9() {
-  let text = "9";
+function buttondiv() {
+  let text = "/";
   document.getElementById('screen').innerHTML = text;
 }
 
