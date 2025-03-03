@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+        </style>        
 </head>
 <body>
-    <div class="output-container" id="screen"></div>
-    <div class="numbers">
+    <h1>Basic Calculator</h1>
+    <div class="shell">
+    <form>
+        <label for="fname"></label>
+        <input type="text" class ="fname" id="fname" name="fname" readonly><br><br>
+            <label for="Clear"></label>
+            <input type="reset" value="CLEAR" class ="btnClr" id="btnClr"/>
+                <label for="Enter"></label>
+                <input type="submit" value="=" class ="btnEntr" id="btnEntr"/>
+    </form>
+    <div class="numbersandoperations">
         <button class="button" id="btnZero"> 0 </button>
         <button class="button" id="btnOne"> 1 </button>
         <button class="button" id="btnTwo"> 2 </button>
@@ -19,13 +31,12 @@
         <button class="button" id="btnSeven"> 7 </button>
         <button class="button" id="btnEight"> 8 </button>
         <button class="button" id="btnNine"> 9 </button>
-    </div>
-    <div class="operations">
+        <button class="button" id="btnDec"> . </button>
         <button class="button" id="btnAdd"> + </button>
         <button class="button" id="btnSub"> - </button>
         <button class="button" id="btnMulti"> * </button>
         <button class="button" id="btnDiv"> / </button>
-        <button class="button" id="btnEntr"> Enter </button>
+    </div>
     </div>
 
     <script src= "script.js"></script>

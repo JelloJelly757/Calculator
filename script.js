@@ -1,115 +1,36 @@
-const btnZero = document.getElementById('btnZero');
-const btnOne = document.getElementById('btnOne');
-const btnTwo = document.getElementById('btnTwo');
-const btnThree = document.getElementById('btnThree');
-const btnFour = document.getElementById('btnFour');
-const btnFive = document.getElementById('btnFive');
-const btnSix = document.getElementById('btnSix');
-const btnSeven = document.getElementById('btnSeven');
-const btnEight = document.getElementById('btnEight');
-const btnNine = document.getElementById('btnNine');
-const btnAdd = document.getElementById('btnAdd');
-const btnSub = document.getElementById('btnSub');
-const btnMulti = document.getElementById('btnMulti');
-const btnDiv = document.getElementById('btnDiv');
-const screen = document.getElementById('screen');
+//Allows for the buttons to appear in the box 
+document.querySelectorAll(".button").forEach(btn => {
+  btn.addEventListener("click", function () {
+    document.getElementById("fname").value += this.innerText; 
+  });
+}); 
 
+//Event Listener for enter button 
+btnEntr.addEventListener("click", buttonentr) 
 
-btnZero.addEventListener("click", button0);
-
-function button0() {
-  let text = "0";
-  document.getElementById('screen').innerHTML = text;
+//Evaluates expressions using eval()
+function buttonentr() {
+  eval(document.getElementById("fname").value)
+  document.getElementById("fname").value = eval(document.getElementById("fname").value);
 }
 
-btnOne.addEventListener("click", button1);
 
-function button1() {
-  let text = "1";
-  document.getElementById('screen').innerHTML = text;
+
+//Fun Element; changes shell color when equal button is pressed 
+let div = document.getElementsByClassName('shell')[0];
+
+function RBC (e) {
+  div.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 }
 
-btnTwo.addEventListener("click", button2);
+btnEntr.addEventListener("click", RBC);
+window.onload = RBC;
 
-function button2() {
-  let text = "2";
-  document.getElementById('screen').innerHTML = text;
+
+
+//Returns shell color to gray when clear button is pressed 
+btnClr.addEventListener("click", returncolor) 
+
+function returncolor() {
+  div.style.background = "rgb(166, 166, 166)"; 
 }
-
-btnThree.addEventListener("click", button3);
-
-function button3() {
-  let text = "3";
-  document.getElementById('screen').innerHTML = text;
-}
-
-btnFour.addEventListener("click", button4);
-
-function button4() {
-  let text = "4";
-  document.getElementById('screen').innerHTML = text;
-}
-
-btnFive.addEventListener("click", button5);
-
-function button5() {
-  let text = "5";
-  document.getElementById('screen').innerHTML = text;
-}
-
-btnSix.addEventListener("click", button6);
-
-function button6() {
-  let text = "6";
-  document.getElementById('screen').innerHTML = text;
-}
-
-btnSeven.addEventListener("click", button7);
-
-function button7() {
-  let text = "7";
-  document.getElementById('screen').innerHTML = text;
-}
-
-btnEight.addEventListener("click", button8);
-
-function button8() {
-  let text = "8";
-  document.getElementById('screen').innerHTML = text;
-}
-
-btnNine.addEventListener("click", button9);
-
-function button9() {
-  let text = "9";
-  document.getElementById('screen').innerHTML = text;
-}
-
-btnAdd.addEventListener("click", buttonadd);
-
-function buttonadd() {
-  let text = "+";
-  document.getElementById('screen').innerHTML = text;
-}
-
-btnSub.addEventListener("click", buttonsub);
-
-function buttonsub() {
-  let text = "-";
-  document.getElementById('screen').innerHTML = text;
-}
-
-btnMulti.addEventListener("click", buttonmulti);
-
-function buttonmulti() {
-  let text = "*";
-  document.getElementById('screen').innerHTML = text;
-}
-
-btnDiv.addEventListener("click", buttondiv);
-
-function buttondiv() {
-  let text = "/";
-  document.getElementById('screen').innerHTML = text;
-}
-
